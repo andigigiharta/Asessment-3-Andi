@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://raw.githubusercontent.com/andigigiharta/json-mobpro/refs/heads/main/"
+private const val BASE_URL = "http://192.168.100.87/Andi/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -19,7 +19,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface HewanApiService {
-    @GET("barang.json")
+    @GET("data.php")
     suspend fun getBarang(): List<Barang>
 }
 
